@@ -1,10 +1,14 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { createTheme } from '@mui/material/styles';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Diversity1Icon from '@mui/icons-material/Diversity1';
+import PaymentIcon from '@mui/icons-material/Payment';
+import GroupsIcon from '@mui/icons-material/Groups';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import DescriptionIcon from '@mui/icons-material/Description';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import LayersIcon from '@mui/icons-material/Layers';
 import { AppProvider, type Navigation } from '@toolpad/core/AppProvider';
 import { DashboardLayout } from '@toolpad/core/DashboardLayout';
@@ -12,29 +16,38 @@ import { useDemoRouter } from '@toolpad/core/internal';
 
 const NAVIGATION: Navigation = [
   {
-    kind: 'header',
-    title: 'Main items',
+    segment: 'lessonSchedule',
+    title: 'Dars Jadvali',
+    icon: <CalendarMonthIcon />,
   },
   {
-    segment: 'dashboard',
-    title: 'Dashboard',
-    icon: <DashboardIcon />,
+    segment: 'groups',
+    title: 'Guruhlar',
+    icon: <AssignmentIcon />,
   },
   {
-    segment: 'orders',
-    title: 'Orders',
-    icon: <ShoppingCartIcon />,
+    segment: 'employees',
+    title: 'Xodimlar',
+    icon: <Diversity1Icon />,
   },
   {
-    kind: 'divider',
+    segment: 'employees',
+    title: 'Umumiy o`quvchilar',
+    icon: <GroupsIcon />,
   },
   {
-    kind: 'header',
-    title: 'Analytics',
+    segment: 'payments',
+    title: 'To`lovlar',
+    icon: <AccountBalanceIcon />,
+  },
+  {
+    segment: 'debtors',
+    title: 'Qarzdorlar',
+    icon: <PaymentIcon />,
   },
   {
     segment: 'reports',
-    title: 'Reports',
+    title: 'Hisobotlar',
     icon: <BarChartIcon />,
     children: [
       {
